@@ -1,18 +1,20 @@
-<h1>Available bounty hunters</h1>
-<% @hunters.each do |hunter| %>
-  <%= link_to hunter_path(hunter.id) do %>
-      <%if hunter.photo.attached? %>
-        <%= cl_image_tag hunter.photo.key %></div>
-      <% end %>
-        <h2><%= "#{hunter.name}"%></h2>
-        <p><%= "#{hunter.catchphrase}" %></p>
-        <p><%= "#{hunter.description}" %></p>
-        <p><%= "#{hunter.price}"%> </p>
-        <p><% hunter.specialities.each do |speciality|%>
-          <%= "#{speciality.name}"%>
+<div class="container">
+  <h1>Available bounty hunters</h1>
+  <% @hunters.each do |hunter| %>
+    <%= link_to hunter_path(hunter.id) do %>
+        <%if hunter.photo.attached? %>
+          <%= cl_image_tag hunter.photo.key %></div>
         <% end %>
-        </p>
+          <h2><%= "#{hunter.name}"%></h2>
+          <p><%= "#{hunter.catchphrase}" %></p>
+          <p><%= "#{hunter.description}" %></p>
+          <p><%= "#{hunter.price}"%> </p>
+          <p><% hunter.specialities.each do |speciality|%>
+            <%= "#{speciality.name}"%>
+          <% end %>
+          </p>
+    <% end %>
   <% end %>
-<% end %>
 
-<%= link_to "add hunter", new_hunter_path%>
+  <%= link_to "add hunter", new_hunter_path%>
+</div>
