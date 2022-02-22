@@ -1,8 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: rgba(0, 0, 0, 0.882);
+  background: rgba(0, 0, 0, 0.93);
   height: 100px;
-  box-shadow: -1px 0px 3px rgba(0, 0, 0, 0.848);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.909);
   font-size: 22px;
 }
 
@@ -12,4 +12,17 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 76px;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: -4px;
+}
+
+.nav-link {
+  color: white !important;
+  font-family: Roboto;
+  font-weight: ligther;
 }
