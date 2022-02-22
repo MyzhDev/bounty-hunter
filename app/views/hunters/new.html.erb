@@ -1,13 +1,13 @@
-
-<%= simple_form_for @hunter do |f| %>
-  <%= f.input :name %>
-  <%= f.input :catchphrase %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :photo, as: :file %>
-    <%= f.simple_fields_for SpecialityHunter.new do |p| %>
-      <%= p.collection_check_boxes :speciality, Speciality.all, :id, :name %>
-
-    <% end %>
-  <%= f.submit "Submit hunter", class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+  <%= simple_form_for @hunter do |f| %>
+    <%= f.input :name %>
+    <%= f.input :catchphrase %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :photo, as: :file %>
+      <%= f.simple_fields_for SpecialityHunter.new do |p| %>
+        <%= p.collection_check_boxes :speciality, Speciality.all, :id, :name %>
+      <% end %>
+    <%= f.submit "Submit hunter", class: "btn btn-primary" %>
+  <% end %>
+</div>
