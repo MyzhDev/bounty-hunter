@@ -4,7 +4,7 @@
     <% @hunters.each do |hunter| %>
       <div class="hunter">
           <%if hunter.photo.attached? %>
-            <div class="hunter-img"><%= cl_image_tag hunter.photo.key, class: 'hunter-img'%></div>
+            <div class="hunter-img"><%= cl_image_tag hunter.photo.key, width: 200, height: 200, crop: :fill, gravity: :face, class: 'hunter-img'%></div>
           <% end %>
             <h2 class="hunter-nickname"><%= "#{hunter.name}"%></h2>
             <p class="hunter-description"><%= "'#{hunter.catchphrase}'" %></p>
