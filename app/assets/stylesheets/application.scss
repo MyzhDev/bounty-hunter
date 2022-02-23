@@ -21,24 +21,34 @@
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
+  color: rgba(0, 0, 0, 0.5);
   position: absolute;
   bottom: 0;
 }
 .footer-links {
+  justify-content: space-evenly;
   display: flex;
   align-items: center;
+  background-color: lightgrey;
 }
 .footer-links a {
-  color: black;
-  opacity: 0.15;
+  color: #D23333;
+
   text-decoration: none;
   font-size: 26px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
   opacity: 1;
+  color: black;
 }
 .footer .fa-heart {
   color: #D23333;
+}
+.footer-copyright {
+  background-color: lightgrey;
+  color:#D23333;
+  font-size: 10px;
+  font-style: italic;
+  text-align: center;
 }
