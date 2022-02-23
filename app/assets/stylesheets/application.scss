@@ -17,8 +17,8 @@
 .footer {
   background: #F4F4F4;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-content: center;
+  justify-content: center;
   height: 100px;
   padding: 0px 50px;
   color: rgba(0, 0, 0, 0.5);
@@ -26,10 +26,15 @@
   bottom: 0;
 }
 .footer-links {
-  justify-content: space-evenly;
+  width: auto;
+  margin-top: -16px;
   display: flex;
   align-items: center;
-  background-color: lightgrey;
+  background-color: #141414;
+  border-top: 1px solid red;
+  padding: 12px;
+  align-content: center;
+  justify-content: center;
 }
 .footer-links a {
   color: #D23333;
@@ -46,8 +51,8 @@
   color: #D23333;
 }
 .footer-copyright {
-  background-color: lightgrey;
-  color:#D23333;
+  background-color: #141414;
+  color: #D23333;
   font-size: 10px;
   font-style: italic;
   text-align: center;
