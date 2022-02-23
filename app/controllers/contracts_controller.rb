@@ -4,6 +4,7 @@ class ContractsController < ApplicationController
     @contract = Contract.new
     @hunter = Hunter.find(params[:id])
   end
+
   def create
     @user = current_user
     @contract = Contract.new(contract_params)

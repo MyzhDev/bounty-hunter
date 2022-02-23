@@ -1,20 +1,23 @@
 <div class="container">
-  <h1>Available bounty hunters</h1>
-  <% @hunters.each do |hunter| %>
-    <%= link_to hunter_path(hunter.id) do %>
-        <%if hunter.photo.attached? %>
-          <%= cl_image_tag hunter.photo.key %></div>
-        <% end %>
-          <h2><%= "#{hunter.name}"%></h2>
-          <p><%= "#{hunter.catchphrase}" %></p>
-          <p><%= "#{hunter.description}" %></p>
-          <p><%= "#{hunter.price}"%> </p>
-          <p><% hunter.specialities.each do |speciality|%>
-            <%= "#{speciality.name}"%>
+  <h1 class="available">Available bounty hunters</h1>
+  <div class="hunters">
+    <% @hunters.each do |hunter| %>
+      <div class="hunter">
+          <%if hunter.photo.attached? %>
+            <div class="hunter-img"><%= cl_image_tag hunter.photo.key, class: 'hunter-img'%></div>
           <% end %>
-          </p>
+            <h2 class="hunter-nickname"><%= "#{hunter.name}"%></h2>
+            <p class="hunter-description"><%= "'#{hunter.catchphrase}'" %></p>
+            <p class="hunter-price"><%= "Book for: #{hunter.price}€"%> </p>
+            <p class="hunter-specs"><% hunter.specialities.each do |speciality|%>
+              <span class="hunter-spec"><%= "#{speciality.name}"%></span>
+            <% end %>
+            </p>
+      <%= link_to "Book this hunter", hunter_path(hunter.id), class:'hunter-btn' %>
+      </div>
     <% end %>
-  <% end %>
 
-  <%= link_to "add hunter", new_hunter_path%>
+
+  </div>
+  <%= link_to "Register a new hunter +", new_hunter_path, class: "btn-adh"%>
 </div>
