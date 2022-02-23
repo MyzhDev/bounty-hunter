@@ -1,18 +1,22 @@
-<div class="container">
-  <h1><%= @hunter.name%></h1>
-  <%if @hunter.photo.attached? %>
-    <%= cl_image_tag @hunter.photo.key %>
-  <% end %>
-  <p><%= "#{@hunter.catchphrase}" %></p>
-  <p><%= "#{@hunter.description}" %></p>
-  <p><%= "#{@hunter.price}"%> </p>
-  <p><% @hunter.specialities.each do |speciality|%>
-    <%= "#{speciality.name}"%>
-  <% end %>
-  </p>
+<div class="showcard">
+  <div class="infos">
+    <%if @hunter.photo.attached? %>
+      <%= cl_image_tag @hunter.photo.key %>
+    <% end %>
+    <div class="details">
+      <h1><%= @hunter.name%></h1>
+      <p id="quote"><%= "#{@hunter.catchphrase}" %></p>
+      <p><%= "#{@hunter.description}" %></p>
+      <p id="price"><%= "#{@hunter.price}"%> </p>
+      <p><% @hunter.specialities.each do |speciality|%>
+        <%= "#{speciality.name}"%>
+      <% end %>
+      </p>
+    </div>
+  </div>
 
-
-<h2>Offer a contract</h2>
-<%= render 'contracts/new', contract: @contract %>
-
+  <div class="contract">
+    <h2>Offer a contract</h2>
+    <%= render 'contracts/new', contract: @contract %>
+  </div>
 </div>
