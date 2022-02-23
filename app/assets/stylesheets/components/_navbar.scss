@@ -4,6 +4,7 @@
   height: 100px;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.909);
   font-size: 22px;
+  border-bottom: 1px solid #ff1716eb;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -29,16 +30,15 @@
 
 
 .nav-link::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  display: block;
-  background-color: red;
-  margin-bottom: 10px;
+  content: ""!important;
+  width: 0%!important;
+  height: 2px!important;
+  display: block!important;
+  background-color: red!important;
+  margin-bottom: 10px!important;
 }
 
 .nav-link:hover::before {
-  width: 100%;
-  transition: all .5s;
+  width: 100%!important;
+  transition: all .5s!important;
 }
-
