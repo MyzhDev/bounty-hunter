@@ -5,6 +5,8 @@ class HuntersController < ApplicationController
 
   def show
     @hunter = Hunter.find(params[:id])
+    @contract = Contract.new
+    @user = current_user
   end
 
   def new
