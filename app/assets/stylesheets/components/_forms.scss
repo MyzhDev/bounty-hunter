@@ -1,0 +1,29 @@
+.form-new-hunter {
+  margin: 50px auto;
+  width: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.form-new-contract {
+  margin: 50px 50px;
+  width: 50%;
+}
+
+.form-btn {
+  display:flex;
+  justify-content: end;
+  margin-top: 20px;
+  color: white;
+  background: black;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 100px;
+}
+
+.form-btn:hover {
+  color: black;
+  background: white;
+  border: solid 1px black;
+  transition: 0.5s;
+}

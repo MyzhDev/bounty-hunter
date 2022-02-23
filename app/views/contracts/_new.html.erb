@@ -1,6 +1,7 @@
-
-<%= simple_form_for [ @hunter, @contract ] do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.submit "Request contract", class: "btn btn-secondary" %>
-<% end %>
+<div class="form-new-contract">
+  <%= simple_form_for [ @hunter, @contract ] do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.submit "Request contract", class: "form-btn" %>
+  <% end %>
+</div>
