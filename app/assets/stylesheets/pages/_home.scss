@@ -1,7 +1,12 @@
 // Specific CSS for your home-page
 
+.html {
+  position: relative;
+  min-height: 100%;
+}
+
 .footmh {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
 }
