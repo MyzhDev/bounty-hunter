@@ -12,18 +12,21 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
-            <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Home", root_path, class: "dropdown-item" %>
-              <%= link_to "Hunters index", hunters_path, class: "dropdown-item" %>
-              <%= link_to "Add a Hunter", new_hunter_path, class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            </div>
+            <%if current_user.photo.attached? %>
+              <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% else %>
+              <%= image_tag "menu.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% end %>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <%= link_to "Home", root_path, class: "dropdown-item" %>
+                <%= link_to "Hunters index", hunters_path, class: "dropdown-item" %>
+                <%= link_to "Add a Hunter", new_hunter_path, class: "dropdown-item" %>
+                <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+              </div>
           </li>
         <% else %>
           <li class="nav-item dropdown">
             <%= link_to "Sign-in", new_user_session_path, class: "dropdown-item" %>
-
           </li>
         <% end %>
       </ul>
