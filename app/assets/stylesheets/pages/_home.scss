@@ -5,6 +5,14 @@ html {
   min-height: 100%;
 }
 
+body {
+  background-color:rgb(12,10,10)!important;
+}
+
 .footmh {
   width: 100%;
+}
+
+.particles-js-canvas-el {
+  position: fixed;
 }
