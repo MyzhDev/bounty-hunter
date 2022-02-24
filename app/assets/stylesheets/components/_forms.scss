@@ -27,3 +27,38 @@
   border: solid 1px black;
   transition: 0.5s;
 }
+
+.formsigni {
+  background-color: rgba($color: #000000, $alpha: 0.2);
+  border: 2px solid red;
+  width: 600px;
+  padding: 86px 60px;
+  color: white;
+  margin: 9% auto;
+}
+
+.formsigni h2 {
+  border-bottom: 1px solid red;
+}
+
+.centerlog {
+  margin: 0px 32%;
+}
+
+.formlgbtn {
+  color: white!important;
+ }
+
+ .formlgbtn:hover {
+  color: #ff1716eb!important;
+  border: 1px solid #fe0101eb;
+ }
+
+.forgaut {
+  text-decoration: none;
+  color: white;
+}
+
+.forgaut:hover {
+  color: red;
+}
