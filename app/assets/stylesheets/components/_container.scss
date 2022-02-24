@@ -7,7 +7,7 @@ justify-content: center;
 
 .hunter {
   font-family: OCR A Std, monospace;
-  background-color:rgba(0, 0, 0, 0.916);
+  background-color:rgba(20, 20, 20, 0.916);
   box-shadow: 2px 5px 14px rgba(0,0,0,0.8);
   padding: 24px 24px;
   width: 280px;
@@ -22,6 +22,7 @@ justify-content: center;
 .hunter-nickname {
   color: azure;
   position: relative;
+  border-bottom: 1px solid red;
   /* text-shadow: 1px 0px 3px rgb(0 0 0 / 80%); */
   text-align: center;
 }
@@ -55,12 +56,12 @@ justify-content: center;
 }
 
 .hunter-btn {
-  color: black;
-  background-color: white;
+  color: #0e0e0e;
+  background-color: #d23333;
   text-decoration: none;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid red;
   padding: 2px 10px;
   border-radius: 4px;
   position: absolute;
