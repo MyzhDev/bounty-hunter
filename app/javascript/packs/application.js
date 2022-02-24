@@ -14,3 +14,6 @@ ActiveStorage.start()
 
 import "controllers"
 import "bootstrap"
+import { initParticule } from '../plugins/init_particle';
+
+initParticule();

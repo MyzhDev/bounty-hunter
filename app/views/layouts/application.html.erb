@@ -10,12 +10,15 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+    </script> <!-- stats.js lib -->
   </head>
 
   <body>
     <%= render "shared/navbar" %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <div id="particles-js"></div> <!-- stats - count particles --> <div class="count-particles"> <span class="js-count-particles">--</span> particles </div>
     <div class="min-height">
       <%= yield %>
     </div>
