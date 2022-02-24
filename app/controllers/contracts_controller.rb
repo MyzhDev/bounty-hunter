@@ -39,6 +39,9 @@ class ContractsController < ApplicationController
     redirect_to hunter_path(@contract.hunter_id)
   end
 
+  # TODO
+  # Faire la difference entre un hunter et l'user du contrat.
+
   private
 
   def contract_params
