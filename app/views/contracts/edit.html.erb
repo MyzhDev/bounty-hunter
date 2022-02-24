@@ -1,0 +1,16 @@
+<div class="form-new-contract">
+  <%= simple_form_for [@hunter, @contract] do |f| %>
+    <% if @hunter %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+
+
+    <% end %>
+
+    <%= f.input :status, as: :hidden %>
+    <%= f.input :hunter_id, as: :hidden, input_html: { value: @hunter.id } %>
+    <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id } %>
+    <%= f.submit "Edit contract", class: "form-btn" %>
+  <% end %>
+
+</div>

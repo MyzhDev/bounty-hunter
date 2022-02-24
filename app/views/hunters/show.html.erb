@@ -21,8 +21,11 @@
 
       <%= render 'contracts/show', contract: @contracts %>
   <% end %>
-  <div class="contract">
+  <% unless @hunter.user_id == @user.id %>
+    <div class="contract">
     <h2>Offer a contract</h2>
     <%= render 'contracts/new' %>
   </div>
+  <% end %>
+
 </div>

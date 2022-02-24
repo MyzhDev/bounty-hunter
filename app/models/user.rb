@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :contracts, dependent: :destroy
   has_one_attached :photo
+  has_one :hunter
 end

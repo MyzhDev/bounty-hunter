@@ -2,6 +2,11 @@
   <%if contract.hunter_id == @hunter.id%>
     <p><%= contract.title%></p>
     <p><%= contract.description%>
+    <%= link_to "Update", edit_hunter_contract_path(@hunter, contract)%>
+    <%= link_to "Delete contract", contract_path(contract),
+    method: :delete,
+    data: { confirm: "Are you sure?" }
+    %>
   <% else %>
     <p> You have no contracts with this hunter </p>
   <% end %>
