@@ -6,22 +6,25 @@ class ContractsController < ApplicationController
   end
 
   def create
-    @user = current_user
     @contract = Contract.new(contract_params)
-    @hunter = Hunter.find(params[:hunter_id])
-    @contract.user = @user
-    @contract.hunter = @hunter
 
-    if @contract.save!
-      redirect_to hunter_path(@hunter)
+    if @contract.save
+      redirect_to hunter_path(@hunter.id)
     else
-      render :new
+      render 'hunters/show'
     end
   end
+
+  def show
+    @user = current_user
+    @contracts = Contract.where(user: @user)
+    @new_contract = Contract.new
+  end
+
 
   private
 
   def contract_params
-    params.require(:contract).permit(:title, :description)
+    params.require(:contract).permit(:title, :description, :user_id, :hunter_id)
   end
 end

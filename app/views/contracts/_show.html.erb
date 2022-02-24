@@ -1,0 +1,8 @@
+<% @contracts.each do  |contract| %>
+  <%if contract.hunter_id == @hunter.id%>
+    <p><%= contract.title%></p>
+    <p><%= contract.description%>
+  <% else %>
+    <p> You have no contracts with this hunter </p>
+  <% end %>
+<% end %>

@@ -15,8 +15,14 @@
         </p>
       </div>
   </div>
+  <% if @contracts.empty?%>
+    <%= "No contracts"%>
+    <% else %>
+
+      <%= render 'contracts/show', contract: @contracts %>
+  <% end %>
   <div class="contract">
     <h2>Offer a contract</h2>
-    <%= render 'contracts/new', contract: @contract %>
+    <%= render 'contracts/new' %>
   </div>
 </div>
