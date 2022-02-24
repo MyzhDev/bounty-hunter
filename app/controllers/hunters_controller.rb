@@ -5,8 +5,8 @@ class HuntersController < ApplicationController
 
   def show
     @hunter = Hunter.find(params[:id])
-    @contract = Contract.new
     @user = current_user
+    @contracts = Contract.where(user: @user)
   end
 
   def new
