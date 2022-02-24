@@ -14,5 +14,6 @@ body {
 }
 
 .particles-js-canvas-el {
-  position: fixed;
+  position: absolute;
+  z-index: -1;
 }
