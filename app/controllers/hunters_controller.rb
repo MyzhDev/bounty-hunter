@@ -28,6 +28,14 @@ class HuntersController < ApplicationController
     end
   end
 
+  # def is_a_hunter?
+  #   @user = current_user
+
+  #   if @user.id ==
+
+  #   end
+  # end
+
   private
 
   def hunter_params
