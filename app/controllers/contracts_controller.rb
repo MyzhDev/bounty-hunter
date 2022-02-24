@@ -6,10 +6,10 @@ class ContractsController < ApplicationController
   end
 
   def create
-    @contract = Contract.new(contract_params)
 
+    @contract = Contract.new(contract_params)
     if @contract.save
-      redirect_to hunter_path(@hunter.id)
+      redirect_to hunter_path(params[:hunter_id])
     else
       render 'hunters/show'
     end
