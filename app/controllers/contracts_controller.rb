@@ -21,10 +21,27 @@ class ContractsController < ApplicationController
     @new_contract = Contract.new
   end
 
+  def edit
+    @user = current_user
+    @contract = Contract.find(params[:id])
+    @hunter = Hunter.find(params[:hunter_id])
+  end
+
+  def update
+    @contract = Contract.find(params[:id])
+    @contract.update(contract_params)
+    redirect_to hunter_path(@contract.hunter_id)
+  end
+
+  def destroy
+    @contract = Contract.find(params[:id])
+    @contract.destroy
+    redirect_to hunter_path(@contract.hunter_id)
+  end
 
   private
 
   def contract_params
-    params.require(:contract).permit(:title, :description, :user_id, :hunter_id)
+    params.require(:contract).permit(:title, :description, :user_id, :hunter_id, :status)
   end
 end
