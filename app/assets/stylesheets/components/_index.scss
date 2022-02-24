@@ -6,3 +6,8 @@
 @import "forms";
 @import "navbar";
 @import "showcard";
+h1 {
+  font-size: calc(1.375rem + 1.5vw);
+  font-family: impact;
+  text-align: center;
+}
