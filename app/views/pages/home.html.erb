@@ -1,6 +1,10 @@
 <div class="banner">
   <%= image_tag('manhunt.png', class: "background") %>
   <div class="container">
-    <a class="btn btn-secondary" id="btnbanner" href="hunters">Book now</a>
+    <% if user_signed_in? %>
+      <a class="btn btn-secondary" id="btnbanner" href="hunters">Book now</a>
+    <% else %>
+      <a class="btn btn-secondary" id="btnbanner" href="users/sign_up">Sign-up</a>
+    <% end %>
   </div>
 </div>

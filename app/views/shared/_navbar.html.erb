@@ -19,14 +19,14 @@
             <% end %>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <%= link_to "Home", root_path, class: "dropdown-item" %>
-                <%= link_to "Hunters index", hunters_path, class: "dropdown-item" %>
-                <%= link_to "Add a Hunter", new_hunter_path, class: "dropdown-item" %>
+                <%= link_to "All hunters", hunters_path, class: "dropdown-item" %>
+                <%= link_to "Register as a hunter", new_hunter_path, class: "dropdown-item" %>
                 <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
               </div>
           </li>
         <% else %>
           <li class="nav-item dropdown">
-            <%= link_to "Sign-in", new_user_session_path, class: "dropdown-item" %>
+            <%= link_to "Sign-in", new_user_session_path, class: "dropdown-item", class: "signinber" %>
           </li>
         <% end %>
       </ul>

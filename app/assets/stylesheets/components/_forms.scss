@@ -5,6 +5,7 @@
 .form-new-contract {
   margin: 50px 50px;
   width: 50%;
+  color: white;
 }
 
 .form-btn {
@@ -31,10 +32,12 @@
   border: 2px solid red;
   width: 600px;
   padding: 86px 60px;
-  color: white;
+  color: rgb(8, 8, 8);
   margin: 9% auto;
 }
-
+.form-inputs {
+  color: black!important;
+}
 .formsigni h2 {
   border-bottom: 1px solid red;
 }
@@ -67,4 +70,3 @@
 //   border: solid 1px black;
 //   transition: 0.5s;
 // }
-

@@ -5,8 +5,9 @@
 
 .background {
   background-size: cover;
-  background-position: top;
   width: 100%;
+  position: relative;
+  top: 24px;
   height: 100%;
 }
  .btn {
@@ -24,10 +25,10 @@
 #btnbanner {
   position: absolute;
   bottom: 26%;
-  right: 33%;
+  right: 31%;
   height: 50px;
   display: flex;
-  width: 120px;
+  width: 9%;
   font-size: 19px;
   border: 1px solid #ff1716eb;
   background-color: transparent;
@@ -35,6 +36,7 @@
   justify-content: space-around;
   align-items: center;
 }
+
 
 .btn-adh {
   font-family: Helvetica;
@@ -72,4 +74,15 @@
   font-weight: lighter;
   border-bottom: 2px solid #ff0600;
   box-shadow: 0px 0px 3px rgba(0,0,0,0.8);
+}
+
+.form-check-input[type="checkbox"] {
+  border: 1px solid #ff0100!important;
+  border-radius: 0!important;
+  background-color: #0b0a0a!important;
+  box-shadow: 0px 0px 4px rgba(255,0,0,1)!important;
+}
+
+span {
+  padding-right: 20px;
 }

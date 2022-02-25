@@ -9,9 +9,6 @@
             <h2 class="hunter-nickname"><%= "#{hunter.name}"%></h2>
             <p class="hunter-description"><%= "'#{hunter.catchphrase}'" %></p>
             <p class="hunter-price"><%= "Book for: #{hunter.price}€"%> </p>
-            <p class="hunter-specs"><% hunter.specialities.each do |speciality|%>
-              <span class="hunter-spec"><%= "#{speciality.name}"%></span>
-            <% end %>
             </p>
       <%= link_to "Book this hunter", hunter_path(hunter.id), class:'hunter-btn' %>
       </div>
@@ -19,5 +16,5 @@
 
 
   </div>
-  <%= link_to "Register a new hunter +", new_hunter_path, class: "btn-adh"%>
+  <%= link_to "Become a hunter", new_hunter_path, class: "btn-adh"%>
 </div>

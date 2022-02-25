@@ -16,4 +16,6 @@ import "controllers"
 import "bootstrap"
 import { initParticule } from '../plugins/init_particle';
 
-initParticule();
+document.addEventListener('turbolinks:load', () => {
+  initParticule();
+})

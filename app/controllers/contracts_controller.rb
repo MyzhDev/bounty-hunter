@@ -1,4 +1,5 @@
 class ContractsController < ApplicationController
+
   def new
     @user = current_user
     @contract = Contract.new
@@ -7,7 +8,9 @@ class ContractsController < ApplicationController
 
   def create
     @contract = Contract.new(contract_params)
+    @contract.status = 'Pending'
     if @contract.save
+
       redirect_to hunter_path(params[:hunter_id])
     else
       render 'hunters/show'

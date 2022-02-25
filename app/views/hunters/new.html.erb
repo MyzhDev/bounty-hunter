@@ -10,7 +10,7 @@
       <%= f.simple_fields_for SpecialityHunter.new do |p| %>
         <%= p.collection_check_boxes :speciality, Speciality.all, :id, :name %>
       <% end %>
-    <%= f.submit "Validate", class: "form-btn" %>
+    <%= f.submit "Validate", class: "btn", style: "position: relative;top: 16px;color: white;" %>
   <% end %>
   </div>
 </div>
