@@ -5,8 +5,9 @@
 
 .background {
   background-size: cover;
-  background-position: top;
   width: 100%;
+  position: relative;
+  top: 24px;
   height: 100%;
 }
  .btn {
