@@ -1,8 +1,10 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/ocr-a-std');
 
 // Define fonts for body and headers
-$body-font: "ocr a";
+$body-font: 'OCR A Std', sans-serif;
+
 $headers-font: "Impact";
 
 // To use a font file (.woff) uncomment following lines
