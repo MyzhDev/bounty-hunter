@@ -1,12 +1,16 @@
+.showpage {
+  margin: 0;
+  display: flex;
+}
+
 .showcontainer {
-  margin: 0 20%;
+  margin: 0 16px;
 }
 
 .showcard {
   display: flex;
   background-color: #ae2012;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  opacity: 0,8;
 }
 
 #quote {
@@ -22,18 +26,62 @@
 .details {
   color: white;
   padding: 16px;
+  width: 50%;
 
   h1 {
     text-align: center;
   }
 }
 
-img {
-    width: 60%;
-  }
-
 .contract {
   padding: 8px;
   background-color: black;
   color: white
+}
+
+#photoshow {
+  width: 50%;
+  object-fit: cover;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.contratshowdiv {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  margin-left: 16px;
+}
+
+.eachcontract {
+  background-color: aliceblue;
+  width: 400px;
+  height: 400px;
+  border-radius: 5px;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+
+  #update {
+    position: absolute;
+    bottom: 10px;
+    left: 265px;
+    // text-decoration: none;
+    // background-color: black;
+    // border-radius: 50px;
+    // padding: 8px;
+  }
+
+  #delete {
+    position: absolute;
+    bottom: 10px;
+  //   text-decoration: none;
+  //   background-color: black;
+  //   border-radius: 50px;
+  //   padding: 8px;
+  }
+
 }

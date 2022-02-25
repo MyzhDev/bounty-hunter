@@ -6,7 +6,6 @@ class ContractsController < ApplicationController
   end
 
   def create
-
     @contract = Contract.new(contract_params)
     if @contract.save
       redirect_to hunter_path(params[:hunter_id])
