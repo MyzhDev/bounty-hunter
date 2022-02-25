@@ -1,6 +1,21 @@
 
 <% @contracts.each do  |contract| %>
   <%if contract.hunter_id == @hunter.id%>
+
+    <div class="eachcontract">
+      <p><%= contract.title%></p>
+      <p><%= contract.description%>
+      <div id="update">
+        <%= link_to "Update", edit_hunter_contract_path(@hunter, contract), :class => "btn"%>
+      </div>
+      <div id="delete">
+        <%= link_to "Delete", contract_path(contract), :class => "btn",
+        method: :delete,
+        data: { confirm: "Are you sure?" }
+        %>
+      </div>
+    </div>
+
     <h3><%= contract.title%></h3>
     <p style="color: white"><%= contract.description%>
     <h4>This contract is:  </h4>
@@ -20,6 +35,7 @@
     method: :delete,
     data: { confirm: "Are you sure?" }
     %>
+
   <% else %>
     <p> You have no contracts with this hunter </p>
   <% end %>

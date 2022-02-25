@@ -7,7 +7,6 @@ class ContractsController < ApplicationController
   end
 
   def create
-
     @contract = Contract.new(contract_params)
     @contract.status = 'Pending'
     if @contract.save
