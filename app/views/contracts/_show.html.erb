@@ -2,7 +2,7 @@
 <% @contracts.each do  |contract| %>
   <%if contract.hunter_id == @hunter.id%>
     <h3><%= contract.title%></h3>
-    <p><%= contract.description%>
+    <p style="color: white"><%= contract.description%>
     <h4>This contract is:  </h4>
     <%if contract.status == 'Pending' %>
       <h4> <%= contract.status%> <span style="opacity:0;">....</span>  <i class="fa fa-clock text-warning" style="opacity:0.7;"></i> </h4>
