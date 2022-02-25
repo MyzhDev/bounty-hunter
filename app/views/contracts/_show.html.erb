@@ -1,7 +1,19 @@
 <% @contracts.each do  |contract| %>
   <%if contract.hunter_id == @hunter.id%>
-    <p><%= contract.title%></p>
+    <h3><%= contract.title%></h3>
     <p><%= contract.description%>
+    <h4>This contract is:
+    <%if contract.status == 'Pending' %>
+      <%= contract.status%> <i class="fa-solid fa-pen-to-square"></i>
+    <% elsif contract.status == 'Accepted' %>
+      <%= contract.status%> <i class="fa-solid fa-calendar-check"></i>
+    <% elsif contract.status == 'Declined' %>
+      <%= contract.status%> <i class="fa-solid fa-square-xmark"></i>
+    <% else %>
+      <%= contract.status%><i class="fa-solid fa-square-check"></i>
+    <% end %>
+    </h4>
+
     <%= link_to "Update", edit_hunter_contract_path(@hunter, contract)%>
     <%= link_to "Delete contract", contract_path(contract),
     method: :delete,

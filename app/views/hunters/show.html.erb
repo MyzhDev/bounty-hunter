@@ -9,7 +9,7 @@
         <p id="quote"><%= "#{@hunter.catchphrase}" %></p>
         <p><%= "#{@hunter.description}" %></p>
         <p id="price"><%= "#{@hunter.price}€"%> </p>
-        <p><% @hunter.specialities.each do |speciality|%>
+        <p>Specialties: <% @hunter.specialities.each do |speciality|%>
           <%= "#{speciality.name}"%>
         <% end %>
         </p>
