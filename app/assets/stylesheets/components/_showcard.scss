@@ -6,12 +6,13 @@
 
 .showcontainer {
   margin: 0 16px;
+  border: 2px solid #86110d;
 }
 
 .showcard {
   display: flex;
-  background-color: #ae2012;
-  opacity: 0,8;
+  background-color: #ed191526;
+  border-bottom: 1px solid #ed191563;
   margin-bottom: 40px;
 }
 
@@ -37,7 +38,7 @@
 
 .contract {
   padding: 8px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.101);
   color: white!important;
 }
 
@@ -58,8 +59,9 @@
   overflow-y: scroll;
   margin-left: 16px;
   justify-content: center;
-  h3, h4 {
-    color: black !important;
+
+  h3, h4, p {
+    color: #f4f4f4 !important;
   }
 
 }
@@ -69,7 +71,8 @@
 }
 
 .eachcontract {
-  background-color: aliceblue;
+  background-color: transparent;
+  border: 2px solid #ff1716eb;
   width: 400px;
   height: 400px;
   border-radius: 5px;
