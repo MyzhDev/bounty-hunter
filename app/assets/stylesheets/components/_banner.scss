@@ -25,10 +25,10 @@
 #btnbanner {
   position: absolute;
   bottom: 26%;
-  right: 32%;
+  right: 31%;
   height: 50px;
   display: flex;
-  width: 127px;
+  width: 9%;
   font-size: 19px;
   border: 1px solid #ff1716eb;
   background-color: transparent;
@@ -81,4 +81,8 @@
   border-radius: 0!important;
   background-color: #0b0a0a!important;
   box-shadow: 0px 0px 4px rgba(255,0,0,1)!important;
+}
+
+span {
+  padding-right: 20px;
 }
