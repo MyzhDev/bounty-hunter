@@ -3,8 +3,18 @@
   <%if contract.hunter_id == @hunter.id%>
 
     <div class="eachcontract">
-      <p><%= contract.title%></p>
-      <p><%= contract.description%>
+      <h3><%= contract.title%></h3>
+      <p><%= contract.description%></p>
+      <h4>This contract is:  </h4>
+        <%if contract.status == 'Pending' %>
+          <h4> <%= contract.status%> <span style="opacity:0;">....</span>  <i class="fa fa-clock text-warning" style="opacity:0.7;"></i> </h4>
+        <% elsif contract.status == 'Accepted' %>
+          <h4> <%= contract.status%> <span style="opacity:0;">....</span>  <i class="fa fa-crosshairs text-info"></i> </h4>
+        <% elsif contract.status == 'Declined' %>
+          <h4><%= contract.status%> <span style="opacity:0;">....</span>  <i class="fa fa-ban text-danger"></i></h4>
+        <% else %>
+          <h4><%= contract.status%> <span style="opacity:0;">....</span>  <i class="fa fa-check text-success"></i></h4>
+        <% end %>
       <div id="update">
         <%= link_to "Update", edit_hunter_contract_path(@hunter, contract), :class => "btn"%>
       </div>
@@ -14,28 +24,7 @@
         data: { confirm: "Are you sure?" }
         %>
       </div>
-    </div>
-
-    <h3><%= contract.title%></h3>
-    <p style="color: white"><%= contract.description%>
-    <h4>This contract is:  </h4>
-    <%if contract.status == 'Pending' %>
-      <h4> <%= contract.status%> <span style="opacity:0;">....</span>  <i class="fa fa-clock text-warning" style="opacity:0.7;"></i> </h4>
-    <% elsif contract.status == 'Accepted' %>
-      <h4> <%= contract.status%> <span style="opacity:0;">....</span>  <i class="fa fa-crosshairs text-info"></i> </h4>
-    <% elsif contract.status == 'Declined' %>
-      <h4><%= contract.status%> <span style="opacity:0;">....</span>  <i class="fa fa-ban text-danger"></i></h4>
-    <% else %>
-      <h4><%= contract.status%> <span style="opacity:0;">....</span>  <i class="fa fa-check text-success"></i></h4>
-    <% end %>
-
-
-    <%= link_to "Update", edit_hunter_contract_path(@hunter, contract)%>
-    <%= link_to "Delete contract", contract_path(contract),
-    method: :delete,
-    data: { confirm: "Are you sure?" }
-    %>
-
+  </div>
   <% else %>
     <p> You have no contracts with this hunter </p>
   <% end %>

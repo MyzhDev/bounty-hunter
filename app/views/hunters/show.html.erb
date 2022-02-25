@@ -13,11 +13,6 @@
         <p><%= "#{@hunter.description}" %></p>
         <p id="price"><%= "#{@hunter.price}€"%> </p>
 
-        <p>
-          <% @hunter.specialities.each do |speciality|%>
-            <%= "#{speciality.name}"%>
-          <% end %>
-
         <p>Specialties: <% @hunter.specialities.each do |speciality|%>
           <%= "#{speciality.name}"%>
         <% end %>
@@ -43,12 +38,5 @@
       <%= render 'contracts/show', contract: @contracts %>
     <% end %>
   </div>
-  <%= render 'contracts/show' %>
-  <% unless @hunter.user_id == @user.id %>
-    <div class="contract" style="color: white!important">
-      <h2>Offer a contract</h2>
-      <%= render 'contracts/new' %>
-    </div>
-  <% end %>
 
 </div>

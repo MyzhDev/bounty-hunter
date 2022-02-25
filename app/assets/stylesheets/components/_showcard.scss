@@ -1,6 +1,7 @@
 .showpage {
-  margin: 0;
+  margin: 0 auto;
   display: flex;
+  width: 80%;
 }
 
 .showcontainer {
@@ -11,6 +12,7 @@
   display: flex;
   background-color: #ae2012;
   opacity: 0,8;
+  margin-bottom: 40px;
 }
 
 #quote {
@@ -41,11 +43,10 @@
 
 #photoshow {
   width: 50%;
-  object-fit: cover;
-
   img {
     object-fit: cover;
     width: 100%;
+        height: 100%;
   }
 }
 
@@ -53,7 +54,18 @@
   display: flex;
   flex-wrap: wrap;
   width: 50%;
+  height: 90vh;
+  overflow-y: scroll;
   margin-left: 16px;
+  justify-content: center;
+  h3, h4 {
+    color: black !important;
+  }
+
+}
+
+.contratshowdiv::-webkit-scrollbar {
+  display: none;
 }
 
 .eachcontract {
@@ -64,6 +76,7 @@
   padding: 16px;
   text-align: center;
   position: relative;
+  margin-bottom: 8px;
 
   #update {
     position: absolute;
